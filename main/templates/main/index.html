@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <Title>Goober</Title>
+
+        {% load static %}
+        <link type="text/css" rel="stylesheet" href="{% static 'main/index.css' %}"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+    
+    <body>
+        <nav id="header">
+            <ul>
+                <li><a href="https://accounts.google.com/">+You</a></li>
+                <li><a href="https://www.google.com/gmail/">Gmail</a></li>
+                <li><a href="https://www.google.com/imghp?hl=EN">Images</a></li>
+                <li><a href="https://apps.google.com/">Apps</a></li>
+                <li><a href="https://accounts.google.com/servicelogin">Sign in</a></li>
+            </ul>
+        </nav>
+
+        <div id="container">
+            <h1 id="logo">Google</h1>
+            <img id="imageMain" src="{% static 'main/Cyber.png' %}">
+
+            <form id="mainSearchForm" method="POST" action="/"> 
+                {% csrf_token %}
+                <input type="text" id="InputField" name="userInput">
+                <input type="hidden" id="hiddenRecording" name="userRecording">
+                <input type="hidden" id="searchFocus" name="searchFocus">
+                <button id="SubmitButton" type="submit"><bold>Google search</bold></button>
+                <button type="button" value="Feeling Lucky"> <bold>Feeling Lucky</bold></button>
+            </form>
+        
+            <p>
+                <small>Google.ca offered in:<a href=""> Fran&ccedil;ais</a></small></p>
+        </div>
+    
+        <footer>
+            <nav class="clearfix">
+                <ul class="left-links">
+                    {% if The_Recording_Is_Satisfied == True %}
+                    <li>
+                        <a href="">The Flag is</a>
+                    </li>
+                    <li>
+                        <a href=""> ----> </a>
+                    </li>
+                    <li>
+                        <a href="">Konami_Code_123</a>
+                    </li>
+                    {% else %}
+                    <li>
+                         <a href="">Advertising</a>
+                    </li>
+                    <li>
+                        <a href="">Business</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    {% endif %}
+                </ul>
+
+                <ul class="right-links"> 
+
+                    <li>
+                        <a href="">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="">Terms</a>
+                    </li>
+                    <li>
+                        <a href="">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+
+    <script type="text/javascript" src="{% static 'main/userMonitoring.js' %}"></script>
+
+</html>
