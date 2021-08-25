@@ -1,0 +1,99 @@
+{% extends 'main/result_base.html' %} 
+
+
+{% block Search_Text %}
+<input type="text" id="InputField" name="userInput" value="TyperzXtremeChallenge" />
+
+{% endblock %}
+
+{% block Search_Results %}
+    <p id="searchresultsnumber">About 0 results (0.92 seconds) </p>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+    <div class="searchresult">
+        <h2>TyperzXtremeChallenge</h2>
+        
+    </div>
+
+    <div id="container">
+        <!-- Header Section -->
+        <div id="header">
+            <!-- Counter Section -->
+            <div id="time">
+                <h3>Remaining Time</h3>
+                <h3 id="counter">00</h3>
+                <h3 id="start">Click Here To Start CountDown.</h3>
+            </div>
+            <!-- Main Section -->
+            <div id="textarea">
+                <div id="typingText"></div>
+                <textarea id="userInput" placeholder="Start Typing Here."></textarea>
+            </div>
+            <!-- Result Section -->
+            <div id="result">
+                <!-- Words Per Minute -->
+                <div class="showResult">
+                    <h3>WPM</h3>
+                    <h3 id="words">00</h3>
+                </div>
+
+                <!-- Characters Per Minute -->
+                <div class="showResult">
+                    <h3>CPM</h3>
+                    <h3 id="characters">00</h3>
+                </div>
+
+                <!-- Total Errors -->
+                <div class="showResult">
+                    <h3>ERRORS</h3>
+                    <h3 id="error">00</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+            <div class="pagebar">
+                <ul class="pagelist">
+                    <li class="pagelistprevious">Previous</li>
+                    <li class="pagelistfirst">1</li>
+
+                    <li class="pagelistnext">Next</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% load static %}
+    <script type="text/javascript" src="{% static 'main/typer.js' %}"></script>
+{% endblock %}

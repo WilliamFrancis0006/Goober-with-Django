@@ -10,6 +10,9 @@ def userSearch(response, data):
         elif data == "pandaz":
             return render(response, "main/result_pandaz.html")
 
+        elif data == "TyperzXtremeChallenge":
+            return render(response, "main/result_TyperzXtremeChallenge.html")
+
         elif data == "Show me the flag please sir.":
             return render(response, "main/result_flagPleaseSir.html")
 
